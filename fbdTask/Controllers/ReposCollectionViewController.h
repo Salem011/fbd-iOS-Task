@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ReposCollectionViewController.h
 //  fbdTask
 //
 //  Created by Salem Mohamed on 4/29/18.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ReposCollectionViewController : UICollectionViewController
 
 @end
-

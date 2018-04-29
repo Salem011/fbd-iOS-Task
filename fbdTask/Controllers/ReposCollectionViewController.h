@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReposCollectionViewController : UICollectionViewController
+@interface ReposCollectionViewController : UICollectionViewController <UICollectionViewDelegateFlowLayout>
 
 @end

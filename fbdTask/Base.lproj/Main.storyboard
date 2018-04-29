@@ -31,38 +31,54 @@
                                     <rect key="frame" x="0.0" y="0.0" width="367" height="121"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q88-v6-0TS">
-                                            <rect key="frame" x="20" y="20" width="327" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgd-hz-ytO">
-                                            <rect key="frame" x="20" y="51" width="327" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner's Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAy-pL-1dp">
-                                            <rect key="frame" x="20" y="84" width="327" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E59-2y-GaF">
+                                            <rect key="frame" x="0.0" y="0.0" width="367" height="121"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q88-v6-0TS">
+                                                    <rect key="frame" x="20" y="20" width="327" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgd-hz-ytO">
+                                                    <rect key="frame" x="20" y="49" width="327" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner's Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAy-pL-1dp">
+                                                    <rect key="frame" x="20" y="75" width="327" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="AAy-pL-1dp" firstAttribute="top" secondItem="mgd-hz-ytO" secondAttribute="bottom" constant="8" id="7cd-Cl-xz1"/>
+                                                <constraint firstAttribute="width" constant="367" id="9E3-Cm-hL8"/>
+                                                <constraint firstAttribute="trailing" secondItem="AAy-pL-1dp" secondAttribute="trailing" constant="20" id="HZT-c6-ael"/>
+                                                <constraint firstAttribute="trailing" secondItem="mgd-hz-ytO" secondAttribute="trailing" constant="20" id="Qqd-sH-tlp"/>
+                                                <constraint firstItem="mgd-hz-ytO" firstAttribute="top" secondItem="Q88-v6-0TS" secondAttribute="bottom" constant="8" id="YE7-a9-ULy"/>
+                                                <constraint firstItem="Q88-v6-0TS" firstAttribute="leading" secondItem="E59-2y-GaF" secondAttribute="leading" constant="20" id="eAF-6c-5v1"/>
+                                                <constraint firstItem="Q88-v6-0TS" firstAttribute="top" secondItem="E59-2y-GaF" secondAttribute="top" constant="20" id="fAT-kh-4y2"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q88-v6-0TS" secondAttribute="trailing" constant="20" id="k8d-sf-GM3"/>
+                                                <constraint firstAttribute="bottom" secondItem="mgd-hz-ytO" secondAttribute="bottom" constant="54" id="k9Q-lp-8uL"/>
+                                                <constraint firstItem="AAy-pL-1dp" firstAttribute="leading" secondItem="E59-2y-GaF" secondAttribute="leading" constant="20" id="o8J-dg-kzN"/>
+                                                <constraint firstItem="mgd-hz-ytO" firstAttribute="top" secondItem="E59-2y-GaF" secondAttribute="top" constant="49" id="rH2-1S-1GH"/>
+                                                <constraint firstItem="mgd-hz-ytO" firstAttribute="leading" secondItem="E59-2y-GaF" secondAttribute="leading" constant="20" id="uvZ-P0-6Fv"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="AAy-pL-1dp" secondAttribute="trailing" constant="20" id="ArP-ii-2jb"/>
-                                    <constraint firstItem="Q88-v6-0TS" firstAttribute="leading" secondItem="xie-cm-wIq" secondAttribute="leading" constant="20" id="Eqn-Vs-5nV"/>
-                                    <constraint firstItem="AAy-pL-1dp" firstAttribute="leading" secondItem="xie-cm-wIq" secondAttribute="leading" constant="20" id="KwW-23-l9M"/>
-                                    <constraint firstItem="Q88-v6-0TS" firstAttribute="top" secondItem="xie-cm-wIq" secondAttribute="top" constant="20" id="N81-Y6-H00"/>
-                                    <constraint firstItem="mgd-hz-ytO" firstAttribute="leading" secondItem="xie-cm-wIq" secondAttribute="leading" constant="20" id="Nfn-xz-CBC"/>
-                                    <constraint firstAttribute="trailing" secondItem="Q88-v6-0TS" secondAttribute="trailing" constant="20" id="iqx-RA-Udn"/>
-                                    <constraint firstItem="AAy-pL-1dp" firstAttribute="top" secondItem="mgd-hz-ytO" secondAttribute="bottom" constant="15" id="n4o-xd-jrh"/>
-                                    <constraint firstAttribute="trailing" secondItem="mgd-hz-ytO" secondAttribute="trailing" constant="20" id="r40-hv-zN8"/>
-                                    <constraint firstItem="mgd-hz-ytO" firstAttribute="top" secondItem="Q88-v6-0TS" secondAttribute="bottom" constant="10" id="sqc-uz-V1D"/>
+                                    <constraint firstAttribute="bottom" secondItem="E59-2y-GaF" secondAttribute="bottom" id="8aT-Gr-Ai4"/>
+                                    <constraint firstItem="E59-2y-GaF" firstAttribute="top" secondItem="xie-cm-wIq" secondAttribute="top" id="9he-Q5-9T6"/>
+                                    <constraint firstItem="E59-2y-GaF" firstAttribute="leading" secondItem="xie-cm-wIq" secondAttribute="leading" id="FwX-cf-k4i"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="containerView" destination="E59-2y-GaF" id="aeC-Dl-Lxu"/>
+                                    <outlet property="contentViewWidthConstraint" destination="9E3-Cm-hL8" id="7Ph-16-rWe"/>
                                     <outlet property="nameLabel" destination="Q88-v6-0TS" id="EXp-PN-rix"/>
                                     <outlet property="ownerLoginLabel" destination="AAy-pL-1dp" id="Tph-GK-037"/>
                                     <outlet property="repoDescriptionLabel" destination="mgd-hz-ytO" id="jQg-Eb-Qp4"/>

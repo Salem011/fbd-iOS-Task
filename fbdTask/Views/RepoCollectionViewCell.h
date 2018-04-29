@@ -14,5 +14,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *repoDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ownerLoginLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewWidthConstraint;
+
 
 @end

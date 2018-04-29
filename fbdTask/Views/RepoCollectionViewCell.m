@@ -10,4 +10,9 @@
 
 @implementation RepoCollectionViewCell
 
+-(void) awakeFromNib {
+    [super awakeFromNib];
+    _contentViewWidthConstraint.constant = UIScreen.mainScreen.bounds.size.width - 20 ;
+}
+
 @end

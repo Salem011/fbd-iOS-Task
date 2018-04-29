@@ -13,6 +13,7 @@
 		4F3AD6D120961268004497B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3AD6CF20961268004497B0 /* LaunchScreen.storyboard */; };
 		4F3AD6D420961268004497B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6D320961268004497B0 /* main.m */; };
 		4F3AD6DD209619ED004497B0 /* ReposCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6DC209619ED004497B0 /* ReposCollectionViewController.m */; };
+		4F3AD6E120961B35004497B0 /* RepoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6E020961B35004497B0 /* RepoCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		4F3AD6D320961268004497B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F3AD6DB209619ED004497B0 /* ReposCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReposCollectionViewController.h; sourceTree = "<group>"; };
 		4F3AD6DC209619ED004497B0 /* ReposCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReposCollectionViewController.m; sourceTree = "<group>"; };
+		4F3AD6DF20961B35004497B0 /* RepoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepoCollectionViewCell.h; sourceTree = "<group>"; };
+		4F3AD6E020961B35004497B0 /* RepoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepoCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		4F3AD6C320961268004497B0 /* fbdTask */ = {
 			isa = PBXGroup;
 			children = (
+				4F3AD6DE20961B1F004497B0 /* Views */,
 				4F3AD6DA209619CC004497B0 /* Controllers */,
 				4F3AD6C420961268004497B0 /* AppDelegate.h */,
 				4F3AD6C520961268004497B0 /* AppDelegate.m */,
@@ -77,6 +81,15 @@
 				4F3AD6DC209619ED004497B0 /* ReposCollectionViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4F3AD6DE20961B1F004497B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F3AD6DF20961B35004497B0 /* RepoCollectionViewCell.h */,
+				4F3AD6E020961B35004497B0 /* RepoCollectionViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3AD6E120961B35004497B0 /* RepoCollectionViewCell.m in Sources */,
 				4F3AD6DD209619ED004497B0 /* ReposCollectionViewController.m in Sources */,
 				4F3AD6D420961268004497B0 /* main.m in Sources */,
 				4F3AD6C620961268004497B0 /* AppDelegate.m in Sources */,

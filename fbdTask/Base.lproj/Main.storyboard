@@ -24,7 +24,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xie-cm-wIq">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="repoCell" id="xie-cm-wIq" customClass="RepoCollectionViewCell">
                                 <rect key="frame" x="4" y="0.0" width="367" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -62,6 +62,11 @@
                                     <constraint firstAttribute="trailing" secondItem="mgd-hz-ytO" secondAttribute="trailing" constant="20" id="r40-hv-zN8"/>
                                     <constraint firstItem="mgd-hz-ytO" firstAttribute="top" secondItem="Q88-v6-0TS" secondAttribute="bottom" constant="10" id="sqc-uz-V1D"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Q88-v6-0TS" id="EXp-PN-rix"/>
+                                    <outlet property="ownerLoginLabel" destination="AAy-pL-1dp" id="Tph-GK-037"/>
+                                    <outlet property="repoDescriptionLabel" destination="mgd-hz-ytO" id="jQg-Eb-Qp4"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

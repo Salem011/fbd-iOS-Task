@@ -14,9 +14,11 @@
 		4F3AD6D420961268004497B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6D320961268004497B0 /* main.m */; };
 		4F3AD6DD209619ED004497B0 /* ReposCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6DC209619ED004497B0 /* ReposCollectionViewController.m */; };
 		4F3AD6E120961B35004497B0 /* RepoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6E020961B35004497B0 /* RepoCollectionViewCell.m */; };
+		BF9792E4504901118398F1F4 /* Pods_fbdTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330DD2CAD7AF0E1BD7B4CFA1 /* Pods_fbdTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		330DD2CAD7AF0E1BD7B4CFA1 /* Pods_fbdTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbdTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3AD6C120961268004497B0 /* fbdTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fbdTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3AD6C420961268004497B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F3AD6C520961268004497B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +31,8 @@
 		4F3AD6DC209619ED004497B0 /* ReposCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReposCollectionViewController.m; sourceTree = "<group>"; };
 		4F3AD6DF20961B35004497B0 /* RepoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepoCollectionViewCell.h; sourceTree = "<group>"; };
 		4F3AD6E020961B35004497B0 /* RepoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepoCollectionViewCell.m; sourceTree = "<group>"; };
+		EB51B0A363FA17533B4A5FE6 /* Pods-fbdTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbdTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbdTask/Pods-fbdTask.debug.xcconfig"; sourceTree = "<group>"; };
+		F45E38C02148E552C205F4DF /* Pods-fbdTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbdTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbdTask/Pods-fbdTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9792E4504901118398F1F4 /* Pods_fbdTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 			children = (
 				4F3AD6C320961268004497B0 /* fbdTask */,
 				4F3AD6C220961268004497B0 /* Products */,
+				CB5C1876913C499F775B592D /* Pods */,
+				ABE8156D1A6C43FB241A8548 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +99,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		ABE8156D1A6C43FB241A8548 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				330DD2CAD7AF0E1BD7B4CFA1 /* Pods_fbdTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB5C1876913C499F775B592D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB51B0A363FA17533B4A5FE6 /* Pods-fbdTask.debug.xcconfig */,
+				F45E38C02148E552C205F4DF /* Pods-fbdTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F3AD6D720961268004497B0 /* Build configuration list for PBXNativeTarget "fbdTask" */;
 			buildPhases = (
+				014EF588858794D12CAB99F8 /* [CP] Check Pods Manifest.lock */,
 				4F3AD6BD20961268004497B0 /* Sources */,
 				4F3AD6BE20961268004497B0 /* Frameworks */,
 				4F3AD6BF20961268004497B0 /* Resources */,
+				82659AFBAAFB6128A961F83A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,6 +183,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		014EF588858794D12CAB99F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fbdTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82659AFBAAFB6128A961F83A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fbdTask/Pods-fbdTask-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ISO8601DateFormatterValueTransformer/ISO8601DateFormatterValueTransformer.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/RKValueTransformers/RKValueTransformers.framework",
+				"${BUILT_PRODUCTS_DIR}/RestKit/RestKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SOCKit/SOCKit.framework",
+				"${BUILT_PRODUCTS_DIR}/TransitionKit/TransitionKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ISO8601DateFormatterValueTransformer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RKValueTransformers.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RestKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SOCKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fbdTask/Pods-fbdTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4F3AD6BD20961268004497B0 /* Sources */ = {
@@ -298,6 +373,7 @@
 		};
 		4F3AD6D820961268004497B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB51B0A363FA17533B4A5FE6 /* Pods-fbdTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,6 +389,7 @@
 		};
 		4F3AD6D920961268004497B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F45E38C02148E552C205F4DF /* Pods-fbdTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

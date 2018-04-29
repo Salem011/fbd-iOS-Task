@@ -9,6 +9,7 @@
 #import "ReposCollectionViewController.h"
 #import "RepoCollectionViewCell.h"
 #import "APIManager.h"
+#import "Repository.h"
 
 @interface ReposCollectionViewController ()
 
@@ -26,7 +27,17 @@ static NSString * const reuseIdentifier = @"repoCell";
     self.collectionView.collectionViewLayout = layout;
     
     
-    [APIManager getRepos];
+    [APIManager getRepos:^(NSArray *repos, NSString *errorMessage) {
+        if (repos != nil) {
+            for (int i = 0; i < repos.count; i++) {
+                Repository *repo = repos[i] ;
+                NSLog(@"Repo Name: %@", repo.name);
+            }
+        }else {
+            NSLog(@"Error retrieved: %@", errorMessage);
+        }
+       
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

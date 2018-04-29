@@ -8,6 +8,7 @@
 
 #import "ReposCollectionViewController.h"
 #import "RepoCollectionViewCell.h"
+#import "APIManager.h"
 
 @interface ReposCollectionViewController ()
 
@@ -24,6 +25,8 @@ static NSString * const reuseIdentifier = @"repoCell";
     layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize;
     self.collectionView.collectionViewLayout = layout;
     
+    
+    [APIManager getRepos];
 }
 
 - (void)didReceiveMemoryWarning {

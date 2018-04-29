@@ -14,6 +14,8 @@
 		4F3AD6D420961268004497B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6D320961268004497B0 /* main.m */; };
 		4F3AD6DD209619ED004497B0 /* ReposCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6DC209619ED004497B0 /* ReposCollectionViewController.m */; };
 		4F3AD6E120961B35004497B0 /* RepoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6E020961B35004497B0 /* RepoCollectionViewCell.m */; };
+		4F3AD6EA20963D69004497B0 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6E920963D69004497B0 /* APIManager.m */; };
+		4F3AD6EE20964087004497B0 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6ED20964087004497B0 /* Repository.m */; };
 		BF9792E4504901118398F1F4 /* Pods_fbdTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330DD2CAD7AF0E1BD7B4CFA1 /* Pods_fbdTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,10 @@
 		4F3AD6DC209619ED004497B0 /* ReposCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReposCollectionViewController.m; sourceTree = "<group>"; };
 		4F3AD6DF20961B35004497B0 /* RepoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepoCollectionViewCell.h; sourceTree = "<group>"; };
 		4F3AD6E020961B35004497B0 /* RepoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepoCollectionViewCell.m; sourceTree = "<group>"; };
+		4F3AD6E820963D53004497B0 /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		4F3AD6E920963D69004497B0 /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		4F3AD6ED20964087004497B0 /* Repository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
+		4F3AD6F020964674004497B0 /* Repository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		EB51B0A363FA17533B4A5FE6 /* Pods-fbdTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbdTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbdTask/Pods-fbdTask.debug.xcconfig"; sourceTree = "<group>"; };
 		F45E38C02148E552C205F4DF /* Pods-fbdTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbdTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbdTask/Pods-fbdTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +74,8 @@
 		4F3AD6C320961268004497B0 /* fbdTask */ = {
 			isa = PBXGroup;
 			children = (
+				4F3AD6EC20964024004497B0 /* Models */,
+				4F3AD6E720963D32004497B0 /* API */,
 				4F3AD6DE20961B1F004497B0 /* Views */,
 				4F3AD6DA209619CC004497B0 /* Controllers */,
 				4F3AD6C420961268004497B0 /* AppDelegate.h */,
@@ -97,6 +105,24 @@
 				4F3AD6E020961B35004497B0 /* RepoCollectionViewCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4F3AD6E720963D32004497B0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4F3AD6E820963D53004497B0 /* APIManager.h */,
+				4F3AD6E920963D69004497B0 /* APIManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4F3AD6EC20964024004497B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F3AD6ED20964087004497B0 /* Repository.m */,
+				4F3AD6F020964674004497B0 /* Repository.h */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		ABE8156D1A6C43FB241A8548 /* Frameworks */ = {
@@ -210,21 +236,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-fbdTask/Pods-fbdTask-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ISO8601DateFormatterValueTransformer/ISO8601DateFormatterValueTransformer.framework",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/RKValueTransformers/RKValueTransformers.framework",
-				"${BUILT_PRODUCTS_DIR}/RestKit/RestKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SOCKit/SOCKit.framework",
-				"${BUILT_PRODUCTS_DIR}/TransitionKit/TransitionKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ISO8601DateFormatterValueTransformer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RKValueTransformers.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RestKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SOCKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -239,9 +257,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F3AD6E120961B35004497B0 /* RepoCollectionViewCell.m in Sources */,
+				4F3AD6EE20964087004497B0 /* Repository.m in Sources */,
 				4F3AD6DD209619ED004497B0 /* ReposCollectionViewController.m in Sources */,
 				4F3AD6D420961268004497B0 /* main.m in Sources */,
 				4F3AD6C620961268004497B0 /* AppDelegate.m in Sources */,
+				4F3AD6EA20963D69004497B0 /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

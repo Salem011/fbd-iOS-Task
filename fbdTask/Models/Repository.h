@@ -16,6 +16,8 @@
 @property (nonatomic, copy) NSString *ownerLogin;
 @property (nonatomic) BOOL isForked ;
 
+- (instancetype)initWithJson:(NSDictionary*)json ;
+
 
 @end
 

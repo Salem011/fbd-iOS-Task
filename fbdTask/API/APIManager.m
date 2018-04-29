@@ -11,6 +11,7 @@
 #import "Repository.h"
 #import "AFNetworking.h"
 
+
 @implementation APIManager
 
 
@@ -21,11 +22,17 @@
     [manager GET:@"https://api.github.com/users/facebook/repos" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         
         NSArray *reposJson = responseObject ;
-        NSArray *repos = [[NSArray alloc] init];
+        NSMutableArray *repos = [[NSMutableArray alloc] init];
         for (int i = 0; i < reposJson.count; i++) {
-            NSLog(@"Repo JSON: %@", reposJson[i]);
-            
+            Repository *repo = [[Repository alloc] initWithJson:reposJson[i]];
+            [repos addObject:repo];
         }
+
+        for (int i = 0; i < repos.count; i++) {
+            Repository *repo = repos[i] ;
+            NSLog(@"Repo Name: %@", repo.name);
+        }
+        
         
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error.localizedDescription);

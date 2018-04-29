@@ -10,5 +10,19 @@
 
 @implementation Repository
 
+- (instancetype)initWithJson:(NSDictionary *)json {
+    
+    if (self = [super init]) {
+        self.repoID = json[@"id"];
+        self.name = json[@"name"];
+        self.descriptionText = json[@"description"];
+        self.isForked = json[@"fork"] ;
+        self.ownerLogin = json[@"owner"][@"login"] ;
+    }
+    
+    return self ;
+}
+
+
 
 @end

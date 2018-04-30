@@ -16,7 +16,7 @@
         self.repoID = json[@"id"];
         self.name = json[@"name"];
         self.descriptionText = json[@"description"];
-        self.isForked = json[@"fork"] ;
+        self.isForked = [json[@"fork"] boolValue];
         self.ownerLogin = json[@"owner"][@"login"] ;
     }
     

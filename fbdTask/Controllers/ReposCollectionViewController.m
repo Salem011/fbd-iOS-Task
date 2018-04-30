@@ -9,6 +9,7 @@
 #import "ReposCollectionViewController.h"
 #import "RepoCollectionViewCell.h"
 #import "ReposViewModel.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface ReposCollectionViewController ()
 
@@ -29,6 +30,7 @@ static NSString * const reuseIdentifier = @"repoCell";
     
     _viewModel = [[ReposViewModel alloc] initWithView: self];
 
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [_viewModel loadRepos];
     
 }
@@ -65,12 +67,13 @@ static NSString * const reuseIdentifier = @"repoCell";
 #pragma mark View Interface
 
 - (void) reposAreLoaded {
-    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     [self.collectionView reloadData];
 
 }
 
 - (void) displayErrorMessage: (NSString *) message {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
     [alert addAction:ok];

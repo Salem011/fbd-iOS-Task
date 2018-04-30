@@ -55,7 +55,7 @@ static NSString * const reuseIdentifier = @"repoCell";
     
     // Configure the cell
     cell.nameLabel.text = [_viewModel repoNameAtIndex:indexPath.row];
-    cell.repoDescriptionLabel.text = [_viewModel repoDescriptionAtIndex:indexPath.row];
+    cell.repoDescriptionLabel.text = [_viewModel repoDescriptionAtIndex:indexPath.row]  ;
     cell.ownerLoginLabel.text = [_viewModel repoOwnerLogin:indexPath.row] ;
     cell.containerView.backgroundColor = [_viewModel repoBackgroundColorAtIndex:indexPath.row];
 

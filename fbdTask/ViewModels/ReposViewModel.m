@@ -43,18 +43,47 @@
             }
             _repos = reposModels ;
             // Call the view to render the view
-            
+            [_view reposAreLoaded];
         }else {
             // Call the view to handle the error message
+            [_view displayErrorMessage:errorMessage];
         }
     }];
     
 }
 
 - (NSUInteger) reposCount {
+    if (!_repos)
+        return 0 ;
     return _repos.count ;
 }
 
+- (NSString *) repoNameAtIndex:(NSInteger)index {
+    Repository *repo = [_repos objectAtIndex:index];
+    return repo.name;
+}
 
+- (NSString *) repoDescriptionAtIndex:(NSInteger)index {
+    Repository *repo = [_repos objectAtIndex:index];
+    NSString *repoDescription = repo.descriptionText ;
+    
+    // A crash happends because of the dynamic dimensions of the cell when a repo description is nil
+    if ([repoDescription isKindOfClass:[NSNull class]])
+        return @"";
+    else
+        return repo.descriptionText;
+}
+
+- (NSString *) repoOwnerLogin:(NSInteger)index {
+    Repository *repo = [_repos objectAtIndex:index];
+    return repo.ownerLogin;
+}
+
+- (UIColor *) repoBackgroundColorAtIndex:(NSInteger)index {
+    Repository *repo = [_repos objectAtIndex:index];
+    if (repo.isForked)
+        return [[UIColor greenColor] colorWithAlphaComponent: 0.8];
+    return [UIColor whiteColor];
+}
 
 @end

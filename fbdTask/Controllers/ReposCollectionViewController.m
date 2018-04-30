@@ -28,9 +28,11 @@ static NSString * const reuseIdentifier = @"repoCell";
     layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize;
     self.collectionView.collectionViewLayout = layout;
     
+    self.title = @"Facebook Public Repositories" ;
+    
     _viewModel = [[ReposViewModel alloc] initWithView: self];
 
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [_viewModel loadRepos];
     
 }

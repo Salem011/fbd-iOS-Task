@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ReposCollectionViewController.h"
 
 @interface ReposViewModel: NSObject
 
 - (void) loadRepos ;
+- (NSUInteger) reposCount ;
+
+- (instancetype) initWithView: (ReposCollectionViewController *) view ;
 
 @end
 

@@ -8,10 +8,11 @@
 
 #import "ReposCollectionViewController.h"
 #import "RepoCollectionViewCell.h"
-#import "APIManager.h"
-#import "Repository.h"
+#import "ReposViewModel.h"
 
 @interface ReposCollectionViewController ()
+
+@property (nonatomic, strong) ReposViewModel *viewModel;
 
 @end
 
@@ -21,23 +22,15 @@ static NSString * const reuseIdentifier = @"repoCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize;
     self.collectionView.collectionViewLayout = layout;
     
+    _viewModel = [[ReposViewModel alloc] initWithView: self];
+
+    [_viewModel loadRepos];
     
-    [APIManager getRepos:^(NSArray *repos, NSString *errorMessage) {
-        if (repos != nil) {
-            for (int i = 0; i < repos.count; i++) {
-                Repository *repo = repos[i] ;
-                NSLog(@"Repo Name: %@", repo.name);
-            }
-        }else {
-            NSLog(@"Error retrieved: %@", errorMessage);
-        }
-       
-    }];
 }
 
 - (void)didReceiveMemoryWarning {

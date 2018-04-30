@@ -75,6 +75,7 @@
                                     <constraint firstAttribute="bottom" secondItem="E59-2y-GaF" secondAttribute="bottom" id="8aT-Gr-Ai4"/>
                                     <constraint firstItem="E59-2y-GaF" firstAttribute="top" secondItem="xie-cm-wIq" secondAttribute="top" id="9he-Q5-9T6"/>
                                     <constraint firstItem="E59-2y-GaF" firstAttribute="leading" secondItem="xie-cm-wIq" secondAttribute="leading" id="FwX-cf-k4i"/>
+                                    <constraint firstItem="E59-2y-GaF" firstAttribute="width" secondItem="xie-cm-wIq" secondAttribute="width" id="ULz-7D-mCh"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="containerView" destination="E59-2y-GaF" id="aeC-Dl-Lxu"/>

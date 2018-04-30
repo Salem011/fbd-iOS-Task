@@ -76,13 +76,15 @@
 
 - (NSString *) repoOwnerLogin:(NSInteger)index {
     Repository *repo = [_repos objectAtIndex:index];
-    return repo.ownerLogin;
+    NSString *ownerLogin = @"Owner Login: " ;
+    
+    return [ownerLogin stringByAppendingString:repo.ownerLogin];
 }
 
 - (UIColor *) repoBackgroundColorAtIndex:(NSInteger)index {
     Repository *repo = [_repos objectAtIndex:index];
     if (repo.isForked)
-        return [[UIColor greenColor] colorWithAlphaComponent: 0.8];
+        return [[UIColor greenColor] colorWithAlphaComponent: 0.6];
     return [UIColor whiteColor];
 }
 

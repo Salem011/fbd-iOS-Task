@@ -14,6 +14,12 @@
 - (void) loadRepos ;
 - (NSUInteger) reposCount ;
 
+- (NSString *) repoNameAtIndex: (NSInteger) index ;
+- (NSString *) repoDescriptionAtIndex: (NSInteger) index ;
+- (NSString *) repoOwnerLogin: (NSInteger) index ;
+- (UIColor *) repoBackgroundColorAtIndex: (NSInteger) index ;
+
+
 - (instancetype) initWithView: (ReposCollectionViewController *) view ;
 
 @end

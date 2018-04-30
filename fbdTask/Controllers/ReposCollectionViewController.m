@@ -47,21 +47,34 @@ static NSString * const reuseIdentifier = @"repoCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return [_viewModel reposCount];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     RepoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    cell.nameLabel.text = @"Repo Name" ;
-    if (indexPath.row == 0)
-        cell.repoDescriptionLabel.text = @"Repo Descripton" ;
-    else
-        cell.repoDescriptionLabel.text = @"Repo Descripton Repo Descripton Repo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo DescriptonRepo Descripton" ;
-    cell.ownerLoginLabel.text = @"FB Login!" ;
-    cell.containerView.backgroundColor = [UIColor blueColor];
+    cell.nameLabel.text = [_viewModel repoNameAtIndex:indexPath.row];
+    cell.repoDescriptionLabel.text = [_viewModel repoDescriptionAtIndex:indexPath.row];
+    cell.ownerLoginLabel.text = [_viewModel repoOwnerLogin:indexPath.row] ;
+    cell.containerView.backgroundColor = [_viewModel repoBackgroundColorAtIndex:indexPath.row];
+
     return cell;
+}
+
+#pragma mark View Interface
+
+- (void) reposAreLoaded {
+    
+    [self.collectionView reloadData];
+
+}
+
+- (void) displayErrorMessage: (NSString *) message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark <UICollectionViewDelegate>

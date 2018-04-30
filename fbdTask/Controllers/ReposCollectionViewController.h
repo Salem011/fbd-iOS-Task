@@ -10,4 +10,7 @@
 
 @interface ReposCollectionViewController : UICollectionViewController <UICollectionViewDelegateFlowLayout>
 
+- (void) reposAreLoaded;
+- (void) displayErrorMessage: (NSString *) message;
+
 @end

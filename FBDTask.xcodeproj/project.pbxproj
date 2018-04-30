@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161340F48DBBB5B5F08362D2 /* Pods_FBDTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AFF665DB1CD7D450411CA9 /* Pods_FBDTask.framework */; };
 		4F3AD6C620961268004497B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD6C520961268004497B0 /* AppDelegate.m */; };
 		4F3AD6CC20961268004497B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3AD6CA20961268004497B0 /* Main.storyboard */; };
 		4F3AD6CE20961268004497B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F3AD6CD20961268004497B0 /* Assets.xcassets */; };
@@ -21,8 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00AFF665DB1CD7D450411CA9 /* Pods_FBDTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBDTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10A972190DF0ECC8EDCA407F /* Pods-FBDTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBDTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBDTask/Pods-FBDTask.release.xcconfig"; sourceTree = "<group>"; };
 		330DD2CAD7AF0E1BD7B4CFA1 /* Pods_fbdTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbdTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F3AD6C120961268004497B0 /* fbdTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fbdTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3AD6C120961268004497B0 /* FBDTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBDTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3AD6C420961268004497B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F3AD6C520961268004497B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4F3AD6CB20961268004497B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		4FB9407720965E7B009CF17A /* ReposViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReposViewModel.m; sourceTree = "<group>"; };
 		EB51B0A363FA17533B4A5FE6 /* Pods-fbdTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbdTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbdTask/Pods-fbdTask.debug.xcconfig"; sourceTree = "<group>"; };
 		F45E38C02148E552C205F4DF /* Pods-fbdTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbdTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbdTask/Pods-fbdTask.release.xcconfig"; sourceTree = "<group>"; };
+		FAC3CF96B18D49A80731ADF0 /* Pods-FBDTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBDTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBDTask/Pods-FBDTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9792E4504901118398F1F4 /* Pods_fbdTask.framework in Frameworks */,
+				161340F48DBBB5B5F08362D2 /* Pods_FBDTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +64,7 @@
 		4F3AD6B820961268004497B0 = {
 			isa = PBXGroup;
 			children = (
-				4F3AD6C320961268004497B0 /* fbdTask */,
+				4F3AD6C320961268004497B0 /* FBDTask */,
 				4F3AD6C220961268004497B0 /* Products */,
 				CB5C1876913C499F775B592D /* Pods */,
 				ABE8156D1A6C43FB241A8548 /* Frameworks */,
@@ -69,12 +74,12 @@
 		4F3AD6C220961268004497B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F3AD6C120961268004497B0 /* fbdTask.app */,
+				4F3AD6C120961268004497B0 /* FBDTask.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F3AD6C320961268004497B0 /* fbdTask */ = {
+		4F3AD6C320961268004497B0 /* FBDTask */ = {
 			isa = PBXGroup;
 			children = (
 				4FB9407520965E57009CF17A /* ViewModels */,
@@ -90,7 +95,7 @@
 				4F3AD6D220961268004497B0 /* Info.plist */,
 				4F3AD6D320961268004497B0 /* main.m */,
 			);
-			path = fbdTask;
+			path = FBDTask;
 			sourceTree = "<group>";
 		};
 		4F3AD6DA209619CC004497B0 /* Controllers */ = {
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				330DD2CAD7AF0E1BD7B4CFA1 /* Pods_fbdTask.framework */,
+				00AFF665DB1CD7D450411CA9 /* Pods_FBDTask.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,6 +157,8 @@
 			children = (
 				EB51B0A363FA17533B4A5FE6 /* Pods-fbdTask.debug.xcconfig */,
 				F45E38C02148E552C205F4DF /* Pods-fbdTask.release.xcconfig */,
+				FAC3CF96B18D49A80731ADF0 /* Pods-FBDTask.debug.xcconfig */,
+				10A972190DF0ECC8EDCA407F /* Pods-FBDTask.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -158,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F3AD6C020961268004497B0 /* fbdTask */ = {
+		4F3AD6C020961268004497B0 /* FBDTask */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F3AD6D720961268004497B0 /* Build configuration list for PBXNativeTarget "fbdTask" */;
+			buildConfigurationList = 4F3AD6D720961268004497B0 /* Build configuration list for PBXNativeTarget "FBDTask" */;
 			buildPhases = (
 				014EF588858794D12CAB99F8 /* [CP] Check Pods Manifest.lock */,
 				4F3AD6BD20961268004497B0 /* Sources */,
@@ -172,9 +180,9 @@
 			);
 			dependencies = (
 			);
-			name = fbdTask;
+			name = FBDTask;
 			productName = fbdTask;
-			productReference = 4F3AD6C120961268004497B0 /* fbdTask.app */;
+			productReference = 4F3AD6C120961268004497B0 /* FBDTask.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4F3AD6BC20961268004497B0 /* Build configuration list for PBXProject "fbdTask" */;
+			buildConfigurationList = 4F3AD6BC20961268004497B0 /* Build configuration list for PBXProject "FBDTask" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -205,7 +213,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F3AD6C020961268004497B0 /* fbdTask */,
+				4F3AD6C020961268004497B0 /* FBDTask */,
 			);
 		};
 /* End PBXProject section */
@@ -235,7 +243,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-fbdTask-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FBDTask-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -248,7 +256,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-fbdTask/Pods-fbdTask-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-FBDTask/Pods-FBDTask-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
@@ -259,7 +267,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fbdTask/Pods-fbdTask-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBDTask/Pods-FBDTask-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -407,7 +415,7 @@
 		};
 		4F3AD6D820961268004497B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB51B0A363FA17533B4A5FE6 /* Pods-fbdTask.debug.xcconfig */;
+			baseConfigurationReference = FAC3CF96B18D49A80731ADF0 /* Pods-FBDTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -423,7 +431,7 @@
 		};
 		4F3AD6D920961268004497B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F45E38C02148E552C205F4DF /* Pods-fbdTask.release.xcconfig */;
+			baseConfigurationReference = 10A972190DF0ECC8EDCA407F /* Pods-FBDTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -440,7 +448,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F3AD6BC20961268004497B0 /* Build configuration list for PBXProject "fbdTask" */ = {
+		4F3AD6BC20961268004497B0 /* Build configuration list for PBXProject "FBDTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F3AD6D520961268004497B0 /* Debug */,
@@ -449,7 +457,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F3AD6D720961268004497B0 /* Build configuration list for PBXNativeTarget "fbdTask" */ = {
+		4F3AD6D720961268004497B0 /* Build configuration list for PBXNativeTarget "FBDTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F3AD6D820961268004497B0 /* Debug */,
